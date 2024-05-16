@@ -1,0 +1,52 @@
+En una empresa inmobiliaria necesitan una pequeña aplicación para gestionar los terrenos que tienen a la venta, pero quieren hacer la aplicación con vistas a que en un futuro puedan vender otro tipo de propiedades. Para realizar la aplicación deberás hacer lo siguiente:
+
+    Implementa una clase abstracta Propiedad, de la cual heredarán todos los demás tipos de propiedades, que contenga la información base siguiente: precio, precio máximo, precio mínimo y localidad. Considera para cada atributo, el tipo más apropiado, si debería ser de clase o de objeto, y si debería o no ser una constante. El precio mínimo de una propiedad son 900 euros y el máximo 99 millones.
+
+        Implementa un constructor para la clase Propiedad, que reciba los parámetros precio y localidad, y que compruebe si el precio está en el rango permitido. Si la localidad es null o cadena vacía, o si el precio no está en el rango, se lanzará una excepción con un mensaje de error apropiado.
+
+        Declara un método abstracto en la clase Propiedad, llamado calcularPrecioConIVA.
+
+        Implementa los métodos set y get que consideres apropiados, y un método toString acorde a los datos contenidos.
+
+    Declara una interfaz llamada Representable. Esta interfaz contendrá un único método, llamado representar, sin argumentos, y que retornará un String. Aquellas clases que implementen este método deberán retornar una representación en modo texto del objeto.
+
+    Implementa ahora una clase llamada Terreno, que será subclase de  Propiedad y que implemente la interfaz Representable. Los objetos de esta clase representarán un rectángulo en un plano. Para ello, esta clase tendrá las siguientes peculiaridades:
+
+        Dispondrá de dos atributos que representarán la base y la altura del terreno, en kilómetros, así como de un atributo que indique el IVA aplicado al precio de venta del terreno (no podrá ser negativo ni superior al 21%).
+
+        Dispondrá de otros cuatro atributos para limitar la base y altura máxima y mínima. En ambos casos el mínimo es 0.010 (diez metros) y el máximo 10.0 (diez kilómetros).
+
+        Deberás valorar de qué tipo deberá ser cada atributo, así como si debe ser de instancia o de clase, y si alguno debe ser constante o no.
+
+        Implementa un constructor, que aparte de realizar lo que hace el constructor de la clase padre (sin repetir código), compruebe si la base, altura e IVA están en el rango adecuado, lanzado una excepción con un mensaje de error apropiado si no lo están.
+
+        Implementa un método llamado getExtension que calcule los metros cuadrados del terreno.
+
+        Implementa el resto de gets y sets que consideres oportunos.
+
+        Implementa el método representar, que muestre una caja (su contorno, no su interior) dibujada usando un asterisco por cada kilómetro de base o altura. Se realizará un redondeo para cada unidad kilométrica, salvo que el redondeo sea 0, en tal caso se considerará 1 para poder representar "algo". Por ejemplo, un terreno de 6,2 km de base y 2,9 de altura se representaría así (6x3):
+
+        ******
+        *    *
+        ******
+
+        Un terreno de 0,3 kilómetros de base y 3,41 kilómetros de altura sería así (1x3 en lugar de 0x3):
+
+        *
+        *
+        *
+
+        En el caso de un terreno de 0,20 km de base y 0,05 km de altura se representaría así (1x1 en lugar de 0x0):
+
+        *
+
+        Haz que en el método toString se añada, a la información ya generada por la clase padre, la base, la altura y la extensión del terreno.
+
+Por último, crea una clase principal de prueba para probar todo eso, creando:
+
+    Terrenos con algún parámetro incorrecto o fuera de rango, capturando las excepciones generadas y mostrando por la pantalla el mensaje de error obtenido. Tendrás que probar con:
+        precios incorrectos;
+        localidad a null o cadena vacía;
+        base y/o altura fuera de rango
+
+    Terrenos con datos correctos, mostrando su información contenida (toString) y a continuación su representación.
