@@ -1,0 +1,30 @@
+
+Escribe un programa que:
+
+    Solicite por teclado un conjunto de números naturales entre 1 y 12 cifras separados por uno o varios espacios en blanco (todos en la misma línea).
+
+    Si no se introduce esa información en el formato apropiado, se volverá a pedir hasta que se respete ese formato.
+
+    Utilice algún tipo de estructura de datos para almacenar el recuento de cuántas veces aparece cada número introducido (cuántos ceros, cuántos 1, cuántos 2, así hasta el 999999999999). Sólo se contarán los números introducidos. Es decir, que si no se introduce el 3, no se guardará su recuento. Y si no se introduce el 99, tampoco se guardará. Pero si el 999 sí ha sido introducido, ése sí aparecerá en el recuento.
+
+    Se recorra la estructura donde se han almacenado los recuentos y se muestren por consola.
+
+ Por ejemplo una salida del programa podría ser algo así:
+
+Introduce una cadena de texto sólo con números naturales entre 1 y 12 cifras separados por espacios en blanco: 
+100000 1 20 1 1 100 100 101 999999999 999 100 99999999999 999999999   9999999999 999999999
+Recuento de números: 
+Número       100000 ->    1 vez
+Número            1 ->    3 veces
+Número           20 ->    1 vez
+Número          100 ->    3 veces
+Número          101 ->    1 vez
+Número    999999999 ->    3 veces
+Número   9999999999 ->    1 vez
+Número          999 ->    1 vez
+Número  99999999999 ->    1 vez
+
+ 
+
+Parece que es de sentido común que no tiene mucha lógica crear un array de enteros de tamaño 1000000000000 para contabilizar quizá 10 o 20 números (o los que sean). Está claro que debemos usar algún otro tipo de estructura algo más sofisticada. A ver qué se os ocurre...
+
