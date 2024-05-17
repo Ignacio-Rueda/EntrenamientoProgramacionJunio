@@ -1,0 +1,24 @@
+En una empresa de alquiler de vehículos necesitan una pequeña aplicación para gestionar los vehículos que se ofrecen. Para realizar un prototipo inicial de la aplicación deberás hacer lo siguiente:
+
+    Implementar una clase Vehiculo que contenga la información base siguiente: matrícula, color (en realidad colores), y fechas en las que el vehículo ha sido usado. Reflexiona para cada atributo que necesites declarar, su tipo, si debe ser de clase u objeto, y si debería o no ser una constante.
+        Un vehículo puede tener como máximo tres colores y como mínimo un color. Para representar los colores necesitarás crear un enum Color (declarado en un archivo independiente Color.java, como una clase) con los colores permitidos. Bastará con que definas lo siguiente en un archivo Color.java: public enum Color { ROJO, VERDE, AZUL, AMARILLO, BLANCO, NEGRO }; Ten en cuenta que los enum son en realidad clases.
+    Implementar un constructor para la clase Vehiculo que reciba dos parámetros: matrícula (en formato NNNNLLL, donde las N son caracteres numéricos y las L son letras, como en las matrículas españolas actuales) y uno o varios colores, pero no más de tres: public Vehiculo (String matricula,  . . . colores )
+        NOTA: si recuerdas el uso del mecanismo varargs para los parámetros métodos, puedes repasarlo en la unidad 5.
+        Si la matrícula no cumple el patrón, o se pasan más de tres colores, o se da cualquier otra circunstancia anómala, debería producirse una excepción con un mensaje de error apropiado.
+    Implementar un método boolean addColor(Color color), que reciba un color y, si es posible, añada el ese color al conjunto de colores que conforman el color del vehículo. Si ha sido posible, se devolverá true. Ahora bien, si no ha sido posible, bien porque el vehículo ya tiene tres colores o bien porque ese color ya estaba incorporado al vehículo, entonces se devolverá false.
+    Implementar un método boolean quitarColor(Color color), que reciba un color y, si es posible, elimine ese color del conjunto de colores que conforman el color del vehículo. Si ha sido posible la eliminación, se devolverá true. Si no ha sido posible (porque no se respete el mínimo de colores o porque ese color no esté entre los colores del coche), entonces se devolverá false.
+    Implementar un método boolean contieneColor (Color color), que reciba un color e indique si el vehículo contiene ese color.
+    Implementar un método int utilizar() que incorpore la fecha actual al grupo de fechas en las que el vehículo ha sido utilizado. Un vehículo puede utilizarse varias veces un mismo día y por tanto almacenaría varias veces la misma fecha. El método debe devolver la cantidad de veces que ha sido utilizado el vehículo, incluyendo la actual.
+    Implementar un método int vecesUtilizado() que devuelva el número de veces que ha sido usado el vehículo desde que se creó.
+    Implementar un método int vecesUtitlizadoAntesDe(LocalDate fecha) que reciba una fecha y devuelva el número de veces que el vehículo ha sido utilizado antes de esa fecha.
+    Implementar un método LocalDate ultimoUso() que devuelva la fecha en la que el vehículo fue usado por última vez. Si el vehículo aún no ha sido utilizado ninguna vez, debería devolver null.
+    Sobrescribir el método toString para que muestre la siguiente información sobre un objeto vehículo y con el siguiente formato: Matricula: NNNNLLL, Colores: [XXX,ZZZ,YYY], Usos N: [fecha1, fecha2, ?].
+
+        Un ejemplo de salida podría ser: Matricula: 1234ABC, Colores: [ROJO, VERDE], Usos 5: [2019-05-22, 2019-05-20, 2019-04-22, 2019-04-22, 2019-04-22]. Fíjate que la misma fecha puede aparecer varias veces si el vehículo fue utilizado varias veces el mismo día.
+
+Por último, crea una clase principal con un método main para probar todo eso, realizando:
+
+    Intentos de creación de vehículos con matrículas erróneas, capturando las excepciones generadas.
+    Creación de vehículos váidos con uno o varios colores, añadiendo y quitando colores.
+    Uso de vehículos.
+    Escritura en consola de la información de los vehículos creados, manipulados y utilizados, haciendo uso de todos los métodos que has implementado.
