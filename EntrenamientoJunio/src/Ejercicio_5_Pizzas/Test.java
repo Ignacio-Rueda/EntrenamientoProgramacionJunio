@@ -1,4 +1,4 @@
-package Ejercicio_6_Pizzas;
+package Ejercicio_5_Pizzas;
 
 public class Test {
 

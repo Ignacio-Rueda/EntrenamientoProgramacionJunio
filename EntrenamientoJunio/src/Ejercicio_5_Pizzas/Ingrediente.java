@@ -1,5 +1,5 @@
 
-package Ejercicio_6_Pizzas;
+package Ejercicio_5_Pizzas;
 
 public enum Ingrediente {
         TOMATE, MOZZARELLA, CHAMPIÑONES, CEBOLLA, JAMON        
