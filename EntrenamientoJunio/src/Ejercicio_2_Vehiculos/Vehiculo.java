@@ -27,9 +27,11 @@ public class Vehiculo {
                 throw new IllegalArgumentException("Los colores introducidos no están disponibles.");
             }
         }
+        this.listadoColores = new ArrayList<>();
         for (int i = 0; i < colores.length; i++) {
             if (!this.listadoColores.contains(colores[i])) {
-                this.listadoColores.add(colores[i]);
+                Color color = colores[i];
+                this.listadoColores.add(color);
             } else {
                 this.listadoColores.clear();
                 throw new IllegalArgumentException("Lo siento, no puedes introducir colores repetidos.");
