@@ -27,11 +27,15 @@ public class Vehiculo {
                 throw new IllegalArgumentException("Los colores introducidos no están disponibles.");
             }
         }
+        Color[]arrayColoresEnum = Color.values();
         this.listadoColores = new ArrayList<>();
         for (int i = 0; i < colores.length; i++) {
             if (!this.listadoColores.contains(colores[i])) {
-                Color color = colores[i];
-                this.listadoColores.add(color);
+                for(Color colorEnum:arrayColoresEnum){
+                    if(colores[i].equals(colorEnum)){
+                        this.listadoColores.add(colorEnum);
+                    }
+                }
             } else {
                 this.listadoColores.clear();
                 throw new IllegalArgumentException("Lo siento, no puedes introducir colores repetidos.");
@@ -55,7 +59,7 @@ public class Vehiculo {
 
     /**
      * Si la lista aún es inferior al máximo de colores posibles, y mayor o
-     * igual al mínimo y la lista NO contiene el color, lo añadimos.
+ igual al mínimo y la lista NO contiene el colorEnum, lo añadimos.
      *
      * @param color
      * @return
