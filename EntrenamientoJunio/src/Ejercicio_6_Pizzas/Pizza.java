@@ -1,4 +1,4 @@
-package Pizzas;
+package Ejercicio_6_Pizzas;
 
 import java.util.ArrayList;
 import java.util.Iterator;
