@@ -1,4 +1,4 @@
-package RecuentoDeNumerosConArchivosDeTexto;
+package Ejercicio_4_RecuentoDeNumerosConArchivosDeTexto;
 
 import java.io.File;
 import java.io.FileNotFoundException;
