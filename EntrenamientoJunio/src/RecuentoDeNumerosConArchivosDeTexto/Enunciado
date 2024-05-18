@@ -1,0 +1,37 @@
+
+Escribe un programa que:
+
+    Solicite por teclado un conjunto de números enteros entre 0 y 99 separados por uno o varios espacios en blanco (todos en la misma línea).
+
+    Si no se introduce esa información en el formato apropiado, se volverá a pedir hasta que se respete ese formato.
+
+    Cuente la cantidad que hay de cada número introducido y escriba en un archivo de texto el recuento de cada número. Si un número no aparece en la lista tampoco se indicará en el recuento. El recuento se indicará de manera gráfica con asteriscos: tantos asteriscos como veces aparezca el número. Por ejemplo si el 25 aparece tres veces se mostrará algo así como ?Número 25: ***?.
+
+Por ejemplo una entrada del programa podría ser algo así:
+Introduce una cadena de texto sólo con números entre 0 y 99 separados por espacios en blanco: 
+xx
+Introduce una cadena de texto sólo con números entre 0 y 99 separados por espacios en blanco: 
+100 20 1200
+Introduce una cadena de texto sólo con números entre 0 y 99 separados por espacios en blanco: 
+100 200
+Introduce una cadena de texto sólo con números entre 0 y 99 separados por espacios en blanco: 
+xx 12 
+Introduce una cadena de texto sólo con números entre 0 y 99 separados por espacios en blanco: 
+    1  2          3 4 10 20 10 10 10 20 30   99 50 51  50 99 1 99
+Archivo creado con éxito.
+
+ 
+
+Y la salida correspondiente en el archivo de texto sería:
+Recuento de números: 
+Lista: 1  2          3 4 10 20 10 10 10 20 30   99 50 51  50 99 1 99
+Número  1: **
+Número  2: *
+Número  3: *
+Número  4: *
+Número 10: ****
+Número 20: **
+Número 30: *
+Número 50: **
+Número 51: *
+Número 99: ***

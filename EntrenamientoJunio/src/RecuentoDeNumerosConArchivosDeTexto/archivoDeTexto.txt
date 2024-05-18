@@ -1,0 +1,12 @@
+Recuento de números:
+Lista:    1  2          3 4 10 20 10 10 10 20 30   99 50 51  50 99 1 99
+Número 1: **
+Número 2: *
+Número 3: *
+Número 4: *
+Número 10: ****
+Número 20: **
+Número 30: *
+Número 50: **
+Número 51: *
+Número 99: ***
