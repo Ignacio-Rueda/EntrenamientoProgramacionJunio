@@ -1,0 +1,48 @@
+
+Un restaurante dispone de una aplicación de gestión escrita en Java en la que se nos ha solicitado que implementemos una nueva clase llamada Pizza que:
+
+        a. Contenga dos atributos: 
+            i. Uno tipo cadena de texto (nombre) que será el nombre de la pizza.
+            ii. Una colección (ingredientes) que permita almacenar el conjunto de suplementos que lleva la pizza (tipo enum Ingrediente, que se proporciona como recurso más abajo). Una pizza puede incluir varios ingredientes (MOZZARELLA, JAMON, etc.), incluso repetidos. Si incluye, por ejemplo, dos veces JAMON, significará que lleva doble de ese suplemento. Si aparece tres, el triple. Un ingrediente no puede aparecer más de tres veces.
+        b. Incorpore un constructor con un solo parámetro: el nombre de la pizza. El nombre de la pizza deberá ser distinto de null y de tamaño superior a 0, en caso contrario se lanzará una excepción tipo IllegalArgumentException con el texto adecuado. No se añadirá ningún ingrediente a la pizza en el constructor.
+        c. Contenga el método void addIngredientes(Ingrediente[] ings), que permita añadir ingredientes del array a la pizza (insertándolos en la colección de ingredientes), teniendo en cuenta que no se llegarán a añadir más de tres ingredientes iguales en una misma pizza.
+        d. Contenga el método void eliminarIngredienteCompletamente (Ingrediente ing), que elimine todas las veces que el ingrediente en cuestión se ha añadido a la pizza (eliminándolo de la colección ingredientes).
+        e. Contenga el método String getIngredientes() que devuelva un String que contenga la lista de ingredientes de la pizza (no es necesario respetar ningún formato concreto).
+
+Una vez implementada la clase Pizza, escribe un programa de prueba que lleve a cabo las siguientes acciones:
+
+    Intentar crear una pizza con un nombre no válido.
+    Crear una pizza con el nombre "Variada" y mostrar sus ingredientes iniciales (no debería tener ninguno).
+    Añadir a la pizza los ingredientes cebolla, champiñones y doble de mozzarella y mostrar a continuación sus ingredientes.
+    Eliminar toda la mozzarella de la pizza y volver a mostrar sus ingredientes.
+
+Aquí tienes una muestra de cómo podría quedar la salida de ese programa de pruebas:
+
+PRUEBA DE USO DE LA CLASE PIZZA
+
+-------------------------------
+
+Error al crear una PIZZA: Nombre no válido
+
+Creada una pizza válida. 
+
+Ingrediente de la pizza: []
+
+Añadimos ingredientes a la pizza (cebolla, champiñones y doble de mozzarella: 
+
+(1) Ingredientes pizza 'Variada': [CEBOLLA, MOZZARELLA, MOZZARELLA, CHAMPIÑONES]
+
+Eliminamos toda la mozzarella de la pizza... 
+
+(2) Ingredientes pizza 'Variada': [CEBOLLA, CHAMPIÑONES]
+
+ 
+
+Declaración del enum Ingrediente: Ingrediente.java
+
+    public enum Ingrediente {
+        TOMATE, MOZZARELLA, CHAMPIÑONES, CEBOLLA, JAMON        
+    };  
+
+ 
+
