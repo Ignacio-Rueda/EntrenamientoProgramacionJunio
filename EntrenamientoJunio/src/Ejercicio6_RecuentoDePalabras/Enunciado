@@ -1,0 +1,25 @@
+
+Escribe un programa en Java que:
+
+    Solicite por teclado un texto solo con palabras (caracteres alfabéticos en minúsculas de al menos longitud uno) separadas por espacios (todos en la misma línea).
+    Si no se introduce esa información en el formato apropiado, se volverá a pedir hasta que se respete ese formato.
+    Solicite el nombre de un archivo en el que almacenar esa información de recuento.
+    Guarde en un archivo binario con el nombre proporcionado el recuento de cuántas veces aparece cada palabra introducida. Lo más fácil sería crear una estructura Map<String, Integer> para guardar esa información y serializarla para guardarla en disco. Pero puede usarse cualquier otro mecanismo que se considere oportuno para almacenar esa información.
+
+Un ejemplo de funcionamiento del programa podría ser:
+
+Introduce un texto sólo con palabras (caracteres alfabéticos en minúsculas de al menos longitud uno) separadas por espacios: 
+uno dos uno dos tres cuatro cinco seis siete uno uno dos uno
+Introduce el nombre del archivo donde deseas almacenar el recuento: 
+recuentos1.rec
+Recuento volcado en archivo recuentos1.rec
+
+ 
+
+Aquí tienes otro ejemplo:
+
+Introduce un texto sólo con palabras (caracteres alfabéticos en minúsculas de al menos longitud uno) separadas por espacios: 
+dos dos dos dos dos
+Introduce el nombre del archivo donde deseas almacenar el recuento: 
+recuentos2.rec
+Recuento volcado en archivo recuentos2.rec
