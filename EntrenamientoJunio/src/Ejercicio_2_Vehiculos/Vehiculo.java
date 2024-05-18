@@ -8,7 +8,7 @@ import java.util.List;
 public class Vehiculo {
 
     private final String matricula;
-    private List<Color> listadoColores = new ArrayList<>();
+    private List<Color> listadoColores;
     private List<LocalDate> listadoFechasHaSidoUsado = new ArrayList<>();
 
     public static final int MIN_COLORES = 1;
