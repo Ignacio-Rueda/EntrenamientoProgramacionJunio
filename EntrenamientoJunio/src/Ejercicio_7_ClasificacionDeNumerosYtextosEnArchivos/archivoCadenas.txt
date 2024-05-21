@@ -1,0 +1,4 @@
+Uno
+Tres
+Texto puro y duro
+Fin

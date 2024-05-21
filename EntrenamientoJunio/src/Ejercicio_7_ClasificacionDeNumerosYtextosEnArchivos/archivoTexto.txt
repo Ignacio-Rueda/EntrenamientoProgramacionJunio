@@ -1,0 +1,7 @@
+Uno
+2
+Tres
+4
+Texto puro y duro
+66
+Fin
