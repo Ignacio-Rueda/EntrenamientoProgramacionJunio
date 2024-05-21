@@ -1,4 +1,4 @@
-package Ejercicio6_RecuentoDePalabras;
+package Ejercicio_6_RecuentoDePalabras;
 
 import java.io.File;
 import java.io.FileInputStream;
