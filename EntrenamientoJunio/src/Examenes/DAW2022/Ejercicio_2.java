@@ -1,5 +1,5 @@
 
-package Examenes;
+package Examenes.DAW2022;
 
 import java.time.LocalDate;
 import java.util.Arrays;

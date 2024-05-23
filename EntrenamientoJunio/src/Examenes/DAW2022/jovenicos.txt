@@ -1,0 +1,2 @@
+Nombre: Vicente, edad: 7
+Nombre: Carlos, edad: 3

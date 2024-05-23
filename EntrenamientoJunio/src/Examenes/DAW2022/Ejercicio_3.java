@@ -1,5 +1,5 @@
 
-package Examenes;
+package Examenes.DAW2022;
 interface Poligono{
     double getArea();
     int getLados();

@@ -1,0 +1,3 @@
+Nombre: Arturo, edad: 25
+Nombre: Diana, edad: 244
+Nombre: Ada, edad: 49

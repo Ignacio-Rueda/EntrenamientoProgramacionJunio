@@ -1,4 +1,4 @@
-package Examenes;
+package Examenes.DAW2022;
 
 public class Ejercicio_1 {
 
