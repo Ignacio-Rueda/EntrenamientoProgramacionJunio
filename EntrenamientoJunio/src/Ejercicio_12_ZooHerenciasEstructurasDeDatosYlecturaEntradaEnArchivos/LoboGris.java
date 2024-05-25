@@ -13,4 +13,5 @@ public class LoboGris extends Animal implements Serializable {
     public LoboGris(String nombrePropio, String fechaEntrada, String lugarProcedencia) throws DateTimeParseException {
         super(nombrePropio, fechaEntrada, lugarProcedencia, LoboGris.CANTIDAD_ALIMENTO, LoboGris.TIPO_ALIMENTO);
     }
+
 }
