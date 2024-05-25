@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
-public class Animal implements Serializable {
+public abstract class Animal implements Serializable {
 
     private final long SerialVersionUID = 1L;
     private String nombrePropio;

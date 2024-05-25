@@ -87,13 +87,11 @@ public class Test {
                         estado = zoo.introducirAnimal(Integer.valueOf(numRecinto), new OsoIberico(nombre, fecha, lugarProcedencia));
                         break;
                 }
-
             } catch (DateTimeParseException ex) {
                 System.out.println(ex.getMessage());
             } catch (IllegalArgumentException ex) {
                 System.out.println(ex.getMessage());
             }
-
         }
     }
 

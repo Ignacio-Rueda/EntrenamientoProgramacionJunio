@@ -1,7 +1,6 @@
 package Ejercicio_12_ZooHerenciasEstructurasDeDatosYlecturaEntradaEnArchivos;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
 public class OsoIberico extends Animal implements Serializable {
