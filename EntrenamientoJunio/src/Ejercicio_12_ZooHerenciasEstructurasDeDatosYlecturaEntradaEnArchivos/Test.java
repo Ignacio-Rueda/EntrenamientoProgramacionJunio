@@ -1,20 +1,20 @@
 package Ejercicio_12_ZooHerenciasEstructurasDeDatosYlecturaEntradaEnArchivos;
 
-
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.TreeMap;
 
 public class Test {
+
     /**
-     * Método que comprueba si el número seleccionado (Cuando seleccionamos una especie determinada) 
-     * está dentro del rango permitido y que no se ha introducido un caracter no numérico.
+     * Método que comprueba si el número seleccionado (Cuando seleccionamos una
+     * especie determinada) está dentro del rango permitido y que no se ha
+     * introducido un caracter no numérico.
+     *
      * @param pos
-     * @return 
+     * @return
      */
     public static boolean comprobarNumero(String pos) {
         boolean resultado = false;
@@ -26,28 +26,30 @@ public class Test {
         }
         return resultado;
     }
+
     /**
-     * Método para introducir una especie determinada, junto con los parámetros necesarios para instanciarla.
+     * Método para introducir una especie determinada, junto con los parámetros
+     * necesarios para instanciarla.
+     *
      * @param zoo
-     * @throws IllegalArgumentException 
+     * @throws IllegalArgumentException
      */
     public static void introducir(Zoo zoo) throws IllegalArgumentException {
-
         boolean estado = false;
         boolean animalCorrecto = false;
         int posEspecie = 0;//Almacenamos la posición de la especie seleccionada.Dependiendo del número entraremos en un "case" determinado en el switch.
         //Listado de especies disponibles.
-       
-     
         List<String> especiesDisponibles = new ArrayList<>(Arrays.asList("Lobo Gris", "Águila", "Oso Ibérico"));
         Scanner teclado = new Scanner(System.in);
         /**
-         * Mostramos un menú para seleccionar el tipo de especie, junto con los parámetros que necesitamos para instanciarla.
+         * Mostramos un menú para seleccionar el tipo de especie, junto con los
+         * parámetros que necesitamos para instanciarla.
          */
         while (!estado) {
             String tipoAnimal = "";
             /**
-             * Mientras no seleccionemos un animal de la lista, seguirá pidiéndonos una especie. 
+             * Mientras no seleccionemos un animal de la lista, seguirá
+             * pidiéndonos una especie.
              */
             while (!animalCorrecto) {
                 System.out.println("Indique el tipo de especie");
@@ -72,45 +74,33 @@ public class Test {
 
             System.out.println("Existen 50 recintos, indique un recinto del 1 - 50");
             String numRecinto = teclado.nextLine();
-            
-            switch (posEspecie) {
-                case 1:
-                    try {
-                    estado = zoo.introducirAnimal(Integer.valueOf(numRecinto), new LoboGris(nombre, fecha, lugarProcedencia));
 
-                } catch (DateTimeParseException ex) {
-                    System.out.println(ex.getMessage());
-                } catch (IllegalArgumentException ex) {
-                    System.out.println(ex.getMessage());
+            try {
+                switch (posEspecie) {
+                    case 1:
+                        estado = zoo.introducirAnimal(Integer.valueOf(numRecinto), new LoboGris(nombre, fecha, lugarProcedencia));
+                        break;
+                    case 2:
+                        estado = zoo.introducirAnimal(Integer.valueOf(numRecinto), new Aguila(nombre, fecha, lugarProcedencia));
+                        break;
+                    case 3:
+                        estado = zoo.introducirAnimal(Integer.valueOf(numRecinto), new OsoIberico(nombre, fecha, lugarProcedencia));
+                        break;
                 }
-                break;
-                case 2:
-                    try {
-                    estado = zoo.introducirAnimal(Integer.valueOf(numRecinto), new Aguila(nombre, fecha, lugarProcedencia));
 
-                } catch (DateTimeParseException ex) {
-                    System.out.println(ex.getMessage());
-                } catch (IllegalArgumentException ex) {
-                    System.out.println(ex.getMessage());
-                }
-                break;
-                case 3:
-                      try {
-                    estado = zoo.introducirAnimal(Integer.valueOf(numRecinto), new OsoIberico(nombre, fecha, lugarProcedencia));
-
-                } catch (DateTimeParseException ex) {
-                    System.out.println(ex.getMessage());
-                } catch (IllegalArgumentException ex) {
-                    System.out.println(ex.getMessage());
-                }
-                break;
+            } catch (DateTimeParseException ex) {
+                System.out.println(ex.getMessage());
+            } catch (IllegalArgumentException ex) {
+                System.out.println(ex.getMessage());
             }
+
         }
     }
-    
+
     /**
      * Entrada principal del programa.
-     * @param args 
+     *
+     * @param args
      */
     public static void main(String args[]) {
         final String SALIR = "salir";
